@@ -1,0 +1,537 @@
+@font-face {
+  font-family: "Barlow-Regular";
+  src: url("../../fonts/Barlow-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow-SemiBold";
+  src: url("../../fonts/Barlow-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nova_Regular";
+  src: url("../../fonts/Proxima_Nova_Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "Nova-SemiBold";
+  src: url("../../fonts/Proxima_Nova_Semibold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Nova-Bold";
+  src: url("../../fonts/Proxima_Nova_Bold.otf") format("truetype");
+}
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Barlow-Regular;
+  font-size: 10px;
+  overflow-y: scroll;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.sec {
+  height: 100vh;
+}
+
+.sec_par {
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 1px 1px 5px #000;
+  cursor: pointer;
+}
+.button:focus {
+  background-color: #ddd;
+}
+
+header {
+  background: linear-gradient(161deg, #26282b 0%, #26282b 49%, #9f8054 100%);
+  min-height: 100vh;
+}
+header .blur {
+  backdrop-filter: blur(30px);
+  background-color: rgba(0, 0, 0, 0.05);
+  min-height: 100vh;
+}
+header .blur .container {
+  padding: 2rem;
+}
+header .blur .container .topBar {
+  padding: 1rem 0;
+}
+header .blur .container .topBar .topSection {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.8rem;
+}
+header .blur .container .topBar .topSection .logo {
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 150px 150px;
+  width: 150px;
+  height: 50px;
+  opacity: 0.8;
+}
+header .blur .container .topBar .topSection .logo:hover {
+  opacity: 1;
+}
+header .blur .container .topBar .topSection .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+header .blur .container .topBar .topSection .contact .phone {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+header .blur .container .topBar .topSection .contact .mail {
+  color: white;
+  font-size: 1.28rem;
+  opacity: 0.5;
+  font-weight: 100;
+  text-decoration: none;
+  line-height: 1rem;
+}
+header .blur .container .topBar .topSection .contact .mail:hover {
+  color: rgb(235, 207, 167);
+  opacity: 1;
+}
+header .blur .container .topBar .bottomSection {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .blur .container .topBar .bottomSection .navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  list-style: none;
+  font-size: 1.6rem;
+}
+header .blur .container .topBar .bottomSection .navBar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+}
+header .blur .container .topBar .bottomSection .navBar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: color 0.3s, box-shadow 0.3s;
+}
+header .blur .container .topBar .bottomSection .navBar li a:hover {
+  color: rgb(235, 207, 167);
+  box-shadow: 0 -1px 0 rgb(235, 207, 167);
+}
+header .blur .container .topBar .bottomSection .respIcoNavBar {
+  width: 30px;
+  height: 30px;
+  display: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+header .blur .container .topBar .bottomSection .respIcoNavBar > .fa-bars-staggered {
+  display: none;
+}
+header .blur .container .topBar .bottomSection .respIcoNavBar:hover > .fa-bars-staggered {
+  display: flex;
+}
+header .blur .container .topBar .bottomSection .respIcoNavBar:hover > .fa-bars {
+  display: none;
+}
+header .blur .container .front {
+  display: flex;
+  gap: 6rem;
+  height: 40rem;
+}
+header .blur .container .front .socialNetworks {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .blur .container .front .socialNetworks h4 {
+  writing-mode: vertical-rl;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: white;
+}
+header .blur .container .front .socialNetworks .icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header .blur .container .front .socialNetworks .icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+header .blur .container .front .socialNetworks .icons::before {
+  content: "";
+  width: 0.1rem;
+  height: 4.2rem;
+  background: #fff;
+  display: inline-block;
+  margin: 35px 0;
+}
+header .blur .container .front .frontData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+}
+header .blur .container .front .frontData .text {
+  font-size: 7.6rem;
+  font-family: Nova_Regular;
+  font-weight: 100;
+  color: rgb(235, 207, 167);
+}
+header .blur .container .front .frontData .text span {
+  position: relative;
+}
+header .blur .container .front .frontData .text span::before {
+  content: "";
+  width: 247px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  background: url(../../../images/others/title-mark.png) center no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+header .blur .container .front .frontData .subText {
+  font-size: 3.2rem;
+  color: white;
+}
+header .blur .container .front .frontData button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  width: 16rem;
+  height: 6rem;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #ebcfa7;
+  box-shadow: 0 0 20px rgba(235, 207, 167, 0.4);
+  cursor: pointer;
+  transition: background 0.4s, border 0.3s;
+}
+header .blur .container .front .frontData button:hover {
+  background-color: rgb(159, 128, 84);
+  border: 2px solid rgb(159, 128, 84);
+}
+
+main {
+  background-color: #fff;
+}
+main #whoWeAre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #whoWeAre .imgContainer {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+main #whoWeAre .imgContainer img {
+  width: 80%;
+  box-shadow: -80px 30px #ebcfa7;
+}
+main #whoWeAre .info {
+  width: 50%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main #whoWeAre .info h3 {
+  font-family: Nova_Regular;
+  font-size: 3rem;
+  font-weight: 300;
+}
+main #whoWeAre .info h3 span {
+  color: #9f8054;
+  display: none;
+}
+main #whoWeAre .info p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+main #whoWeAre .info a {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #9f8054;
+  text-decoration: none;
+}
+main #whatWeDo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+main #whatWeDo .info {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #whatWeDo .info h3 {
+  font-family: Nova_Regular;
+  font-size: 3rem;
+  font-weight: 300;
+}
+main #whatWeDo .info h3 span {
+  color: #9f8054;
+  display: none;
+}
+main #whatWeDo .info p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+main #whatWeDo .imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #whatWeDo .imgContainer section {
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+main #whatWeDo .imgContainer section:hover > i {
+  color: white;
+  background-color: #ebcfa7;
+  border-radius: 50%;
+}
+main #whatWeDo .imgContainer section i {
+  width: 6rem;
+  height: 6rem;
+  font-size: 4rem;
+  color: #ebcfa7;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #whatWeDo .imgContainer section p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+main #gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #gallery .info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+main #gallery .info h3 {
+  font-family: Nova_Regular;
+  font-size: 3rem;
+  font-weight: 300;
+}
+main #gallery .info h3 span {
+  color: #9f8054;
+}
+main #gallery .info p {
+  margin-top: 1rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+main #gallery .imgContainer {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+}
+main #gallery .imgContainer img {
+  width: 22rem;
+}
+main #operational {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main #operational .info h3 {
+  font-family: Nova_Regular;
+  font-size: 3rem;
+  font-weight: 300;
+  position: relative;
+}
+main #operational .info h3 span {
+  color: #9f8054;
+}
+main #operational .info h3::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  width: 4rem;
+  height: 0.5rem;
+  background-color: #9f8054;
+  left: -5rem;
+}
+main #operational .map {
+  width: 70%;
+}
+main #testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #testimonials #slider {
+  position: relative;
+  width: 1000px;
+  height: 265px;
+  overflow: hidden;
+}
+main #testimonials #slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+main #testimonials #slider ul li {
+  position: relative;
+  height: 100%;
+  float: left;
+  transition: all 2s ease;
+}
+main #testimonials #slider ul li .content {
+  width: 1000px;
+  height: 265px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+main #testimonials #slider ul li .content i {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+main #testimonials #slider ul li .content .text {
+  max-width: 60rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+main #testimonials #slider ul li .content .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #testimonials #slider ul li .content .info .nameCustom {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+main #testimonials #slider ul li .content .info .role {
+  color: #9F8054;
+  font-size: 1.4rem;
+}
+main #testimonials #slider #prev {
+  left: 0;
+}
+main #testimonials #slider #next {
+  right: 0;
+}
+main #testimonials #prev,
+main #testimonials #next {
+  width: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #9F8054;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+main #testimonials #prev:hover,
+main #testimonials #next:hover {
+  background-color: #9F8054;
+  text-shadow: 0;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

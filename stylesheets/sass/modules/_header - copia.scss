@@ -1,0 +1,242 @@
+header {
+    background: linear-gradient(161deg, #26282b 0%, #26282b 49%, #9f8054 100%);
+    min-height: 100vh;
+    // display: none;
+
+    .blur {
+        backdrop-filter: blur(30px);
+        background-color: rgba(0, 0, 0, 0.05);
+        min-height: 100vh;
+
+        .container {
+            padding: 2rem;
+
+            .topBar {
+                padding: 1rem 0;
+
+                .topSection {
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                    padding-bottom: .8rem;
+
+                    .logo {
+                        background-image: url("../images/logo.png");
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: 150px 150px;
+                        width: 150px;
+                        height: 50px;
+                        opacity: .8;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    .contact {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+
+                        .phone {
+                            color: white;
+                            font-size: 1.7rem;
+                            font-weight: 600;
+                            text-decoration: none;
+                            // background-color: red;
+                        }
+
+                        .mail {
+                            color: white;
+                            font-size: 1.28rem;
+                            opacity: .5;
+                            font-weight: 100;
+                            text-decoration: none;
+                            line-height: 1rem;
+
+                            &:hover {
+                                color: rgb(235, 207, 167);
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                }
+
+                .bottomSection {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    .navBar {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 4rem;
+                        list-style: none;
+                        font-size: 1.6rem;
+
+                        li {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 7rem;
+
+                            a {
+                                text-decoration: none;
+                                color: white;
+                                font-weight: 700;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100%;
+                                transition: color .3s, box-shadow .3s;
+
+                                &:hover {
+                                    color: rgb(235, 207, 167);
+                                    box-shadow: 0 -1px 0 rgb(235, 207, 167);
+                                }
+                            }
+                        }
+                    }
+
+                    .respIcoNavBar {
+                        width: 30px;
+                        height: 30px;
+                        display: none;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        font-size: 2rem;
+                        cursor: pointer;
+
+                        &>.fa-bars-staggered {
+                            display: none;
+                        }
+
+                        &:hover {
+                            &>.fa-bars-staggered {
+                                display: flex;
+                            }
+
+                            &>.fa-bars {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .front {
+                // background-color: red;
+                display: flex;
+                gap: 6rem;
+                height: 40rem;
+
+                .socialNetworks {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h4 {
+                        writing-mode: vertical-rl;
+                        font-size: 1.4rem;
+                        font-weight: 900;
+                        color: white;
+                    }
+
+                    .icons {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 2rem;
+                            height: 2rem;
+                            color: white;
+                            text-decoration: none;
+                            font-size: 1.2rem;
+                            // background: red;
+                        }
+
+                        &::before {
+                            content: "";
+                            width: .1rem;
+                            height: 4.2rem;
+                            background: #fff;
+                            display: inline-block;
+                            margin: 35px 0;
+                        }
+                    }
+                }
+
+                .frontData {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 3rem;
+
+                    .text {
+                        font-size: 7.6rem;
+                        font-family: Nova_Regular;
+                        font-weight: 100;
+                        color: rgb(235, 207, 167);
+
+                        span {
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                width: 247px;
+                                height: 70px;
+                                position: absolute;
+                                left: 0;
+                                top: 40px;
+                                background: url(../../../images/others/title-mark.png) center no-repeat;
+                                background-size: contain;
+                                z-index: -1;
+                            }
+                        }
+                    }
+
+                    .subText {
+                        font-size: 3.2rem;
+                        color: white;
+                    }
+
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 2rem;
+                        gap: .8rem;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        width: 16rem;
+                        height: 6rem;
+                        background-color: transparent;
+                        color: white;
+                        border: 2px solid #ebcfa7;
+                        box-shadow: 0 0 20px rgb(235 207 167 / 40%);
+                        cursor: pointer;
+                        transition: background .4s, border .3s;
+
+                        &:hover {
+                            background-color: rgb(159, 128, 84);
+                            border: 2px solid rgb(159, 128, 84);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

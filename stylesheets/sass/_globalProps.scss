@@ -1,0 +1,48 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // transition: all .2s;
+}
+
+html {
+    font-family: Barlow-Regular;
+    font-size: 10px;
+    overflow-y: scroll;
+}
+
+body {
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.sec {
+    height: 100vh;
+}
+
+.sec_par {
+    background-color: #f9f9f9;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.button {
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 1px 1px 5px #000;
+    cursor: pointer;
+    &:focus{
+        background-color: #ddd;
+    }
+}
