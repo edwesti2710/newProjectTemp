@@ -69,10 +69,12 @@ img {
 
 header {
   background: linear-gradient(161deg, #26282b 0%, #26282b 49%, #9f8054 100%);
+  background-image: url("../../../images/first-home-section-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
 }
 header .blur {
-  backdrop-filter: blur(30px);
   background-color: rgba(0, 0, 0, 0.05);
   min-height: 100vh;
 }
@@ -176,31 +178,36 @@ header .blur .container .topBar .bottomSection .respIcoNavBar:hover > .fa-bars-s
 header .blur .container .topBar .bottomSection .respIcoNavBar:hover > .fa-bars {
   display: none;
 }
-header .blur .container .front {
+
+main {
+  background-color: #fff;
+}
+main .front {
+  background-color: black;
   display: flex;
   gap: 6rem;
   height: 40rem;
 }
-header .blur .container .front .socialNetworks {
+main .front .socialNetworks {
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-header .blur .container .front .socialNetworks h4 {
+main .front .socialNetworks h4 {
   writing-mode: vertical-rl;
   font-size: 1.4rem;
   font-weight: 900;
   color: white;
 }
-header .blur .container .front .socialNetworks .icons {
+main .front .socialNetworks .icons {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-header .blur .container .front .socialNetworks .icons a {
+main .front .socialNetworks .icons a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,7 +217,7 @@ header .blur .container .front .socialNetworks .icons a {
   text-decoration: none;
   font-size: 1.2rem;
 }
-header .blur .container .front .socialNetworks .icons::before {
+main .front .socialNetworks .icons::before {
   content: "";
   width: 0.1rem;
   height: 4.2rem;
@@ -218,38 +225,38 @@ header .blur .container .front .socialNetworks .icons::before {
   display: inline-block;
   margin: 35px 0;
 }
-header .blur .container .front .frontData {
+main .front .frontData {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 3rem;
 }
-header .blur .container .front .frontData .text {
+main .front .frontData .text {
   font-size: 7.6rem;
   font-family: Nova_Regular;
   font-weight: 100;
   color: rgb(235, 207, 167);
 }
-header .blur .container .front .frontData .text span {
+main .front .frontData .text span {
   position: relative;
 }
-header .blur .container .front .frontData .text span::before {
+main .front .frontData .text span::before {
   content: "";
   width: 247px;
   height: 70px;
   position: absolute;
   left: 0;
   top: 40px;
-  background: url(../images/others/title-mark.png) center no-repeat;
+  background: url(../images/title-mark.png) center no-repeat;
   background-size: contain;
   z-index: -1;
 }
-header .blur .container .front .frontData .subText {
+main .front .frontData .subText {
   font-size: 3.2rem;
   color: white;
 }
-header .blur .container .front .frontData button {
+main .front .frontData button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,13 +273,9 @@ header .blur .container .front .frontData button {
   cursor: pointer;
   transition: background 0.4s, border 0.3s;
 }
-header .blur .container .front .frontData button:hover {
+main .front .frontData button:hover {
   background-color: rgb(159, 128, 84);
   border: 2px solid rgb(159, 128, 84);
-}
-
-main {
-  background-color: #fff;
 }
 main #whoWeAre {
   display: flex;
@@ -532,6 +535,74 @@ main #testimonials #next:hover {
   background-color: #9F8054;
   text-shadow: 0;
   color: white;
+}
+
+footer {
+  background-color: #26282B;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .topFooter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .topFooter .llc {
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+footer .topFooter .llc h3 {
+  font-size: 2.6rem;
+}
+footer .topFooter .llc h4 {
+  font-size: 2rem;
+  width: 40rem;
+  line-height: 1.4;
+  font-weight: 300;
+}
+footer .topFooter .callCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-content: center;
+  gap: 2rem;
+}
+footer .topFooter .callCenter h3 {
+  font-size: 2rem;
+  opacity: 0.6;
+}
+footer .topFooter .callCenter .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer .topFooter .callCenter .contact h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .topFooter .callCenter .contact a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  opacity: 0.4;
+}
+footer .copyright {
+  align-self: flex-start;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1333333333);
 }
 
 /*# sourceMappingURL=style.css.map */
